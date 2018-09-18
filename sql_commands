@@ -1,0 +1,11 @@
+# start Remote AE
+select * from table with final(PUT_HT_LAUNCH(0));
+
+# status Remote AE
+SELECT aeresult FROM TABLE WITH FINAL(inza..nzaejobcontrol('ping',0,'put_ht',false,null,null));
+
+# stop Remote AE
+SELECT aeresult FROM TABLE WITH FINAL(inza..nzaejobcontrol('stop',0,'put_ht',false,null,null));
+
+#test
+select PUT_HT_TRAIN(0,1) FROM irisdata;
